@@ -21,5 +21,13 @@ pipeline {
                 }
             }
         }
+        stage('setup Prometues and Grafana') {
+            steps {
+                script {
+                    sh 'kubectl create -f setup/'
+                    sh 'kubectl create -f manifests/'
+                }
+            }
+        }
     }
 }
