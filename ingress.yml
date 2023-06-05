@@ -9,7 +9,7 @@ spec:
       http: 
         paths:
           - path: "/"
-            pathType: prefix
+            pathType: Prefix
             backend:
               service:
                 name: ali-shopping-cart-svc
