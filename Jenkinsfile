@@ -17,6 +17,7 @@ pipeline {
             steps{
                 script {
                     sh 'kubectl apply -f ingress-controller.yml'
+                    sh 'kubectl apply -f ingress.yml'
                 }
             }
         }
