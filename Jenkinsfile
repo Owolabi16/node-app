@@ -13,5 +13,12 @@ pipeline {
             }
             
         }
+        stage('setup Nginx ingress controller') {
+            steps{
+                script {
+                    sh 'kubectl apply -f ingress-controller.yml'
+                }
+            }
+        }
     }
 }
